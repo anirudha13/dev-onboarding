@@ -30,14 +30,16 @@ git checkout my-feature-branch
 git pull origin dev
 git push origin my-feature-branch
 ```
-* Then by merging your changes into dev using either the command line as,
+* You **MUST** merge your changes into dev by raising a PR of your branch against dev.
+* If required you can merge your changes into dev using the command line as,
 ```
 git checkout dev
 git merge --no-ff my-feature-branch
 git branch -d my-feature-branch
 git push origin dev
 ```
-* You can also merge your changes into dev by raising a PR of your branch against dev.
+* **The preferred method for merging your feature branches into dev is ALWAYS by raising a PR.**
+
 
 #### UAT
 * Once dev is ready to be moved to UAT a PR **must** be created for merging dev into **pre-master**.
@@ -60,6 +62,11 @@ git push origin dev
 #### Why pre-master ?
 * **pre-master** branch is just a gateway to master and it’s main purpose is to prevent any mistaken merges from dev into master.
 * It serves as a layer of protection of the pristine/stable master branch.
+
+#### Branch Naming Conventions
+* **Feature Branches** : Feature branches can be named anything but **MUST** begin with **dev**, **pre-master**, **master**, **release** or **hotfix**.
+* **Release & HotFix Branches** : Release/Hotfix branches must begin with **release-** or **hotfix-**.
+
 
 #### References
 * [A successful Git branching model » nvie.com](http://nvie.com/posts/a-successful-git-branching-model/)
