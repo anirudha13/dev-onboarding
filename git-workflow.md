@@ -64,7 +64,7 @@ git push origin dev
 * It serves as a layer of protection of the pristine/stable master branch.
 
 #### Branch Naming Conventions
-* **Feature Branches** : Feature branches can be named anything but **MUST** begin with **dev**, **pre-master**, **master**, **release** or **hotfix**.
+* **Feature Branches** : Feature branches can be named anything but **MUST NOT** begin with **dev**, **pre-master**, **master**, **release** or **hotfix**.
 * **Release & HotFix Branches** : Release/Hotfix branches must begin with **release-** or **hotfix-**.
 
 
